@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aura Beauty Studio – Cjenik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --aura-gold: #CBB283;
+      --aura-gold-dark: #B89A68;
+      --aura-white: #FAF9F5;
+      --aura-dark: #424754;
+      --text-main: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--aura-white);
+      color: var(--text-main);
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto 40px auto;
+      background: #fff;
+      padding: 40px 50px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .logo-main {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 40px;
+      letter-spacing: 4px;
+      color: var(--aura-gold);
+    }
+
+    .logo-wave {
+      margin: 4px auto 0;
+      width: 130px;
+      height: 12px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--aura-gold-dark), var(--aura-gold));
+      opacity: 0.9;
+      transform: skewX(-5deg);
+    }
+
+    .logo-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 6px;
+      margin-top: 14px;
+      color: var(--aura-gold);
+    }
+
+    .header-info {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    .header-info span {
+      display: block;
+    }
+
+    .header-info a {
+      color: var(--aura-dark);
+      text-decoration: none;
+    }
+
+    .section {
+      margin-top: 25px;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: var(--aura-dark);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .section-underline {
+      width: 60px;
+      height: 2px;
+      background: var(--aura-gold);
+      margin-bottom: 10px;
+    }
+
+    .items {
+      font-size: 14px;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 2px 0;
+    }
+
+    .item-name {
+      max-width: 75%;
+    }
+
+    .item-price {
+      font-weight: 500;
+      color: var(--aura-dark);
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    .item-note {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .subsection-title {
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .package-block {
+      margin: 6px 0 10px 0;
+    }
+
+    .package-title {
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .package-details {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+
+    @media (min-width: 900px) {
+      .two-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 40px;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+      .page {
+        border: none;
+        margin: 0;
+        padding: 25px 30px;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STRANICA 1 -->
+
+  <div class="page">
+    <div class="logo">
+      <div class="logo-main">AURA</div>
+      <div class="logo-wave"></div>
+      <div class="logo-sub">BEAUTY STUDIO</div>
+    </div>
+
+    <div class="header-info">
+      <span>Vukomerec 36, Zagreb</span>
+      <span>+385 95 3679 016</span>
+      <span>Instagram: <a href="https://www.instagram.com/aurabeautystudiio" target="_blank">@aurabeautystudiio</a></span>
+    </div>
+
+    <div class="two-columns">
+
+      <!-- MASAŽE -->
+      <div>
+        <div class="section">
+          <div class="section-title">Masaže</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Relax masaža (30 min)</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Anticelulitna masaža</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Maderoterapija (30 min)</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Čokoladna masaža (40 min)</div>
+              <div class="item-price">30 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Medicinska masaža (cijelo tijelo)</div>
+              <div class="item-price">35 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Masaža lica, vrata i dekoltea (30 min)</div>
+              <div class="item-price">40 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Masaža ruku (15 min)</div>
+              <div class="item-price">10 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MASAŽE – PAKETI -->
+        <div class="section">
+          <div class="section-title">Masaže – paketi</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">5× antistresna masaža (vrat + leđa, 20 min)</div>
+              <div class="item-price">80 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">5× anticelulitna masaža (20 min)</div>
+              <div class="item-price">90 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">5× klasična masaža (30 min)</div>
+              <div class="item-price">150 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">5× Aura masaža (40 min)</div>
+              <div class="item-price">180 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MADEROTERAPIJA – PAKETI -->
+        <div class="section">
+          <div class="section-title">Maderoterapija – paketi</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="subsection-title">Noge + guza (30 min)</div>
+            <div class="item-row">
+              <div class="item-name">Paket 5×</div>
+              <div class="item-price">100 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Paket 10×</div>
+              <div class="item-price">190 €</div>
+            </div>
+
+            <div class="subsection-title" style="margin-top:8px;">Noge + guza + trbuh (45 min)</div>
+            <div class="item-row">
+              <div class="item-name">Paket 5×</div>
+              <div class="item-price">130 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Paket 10×</div>
+              <div class="item-price">210 €</div>
+            </div>
+
+            <div class="subsection-title" style="margin-top:8px;">Ruke + lice (20 min)</div>
+            <div class="item-row">
+              <div class="item-name">Paket 5×</div>
+              <div class="item-price">70 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Paket 10×</div>
+              <div class="item-price">110 €</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKINCARE OSNOVNO + LED MASKA -->
+      <div>
+        <!-- LED MASKA -->
+        <div class="section">
+          <div class="section-title">LED maska</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="package-block">
+              <div class="package-title">Skidanje make-upa + čišćenje + peeling + tretman LED maskom</div>
+              <div class="package-details">
+                1× – 80 €<br>
+                5× – 120 €<br>
+                10× – 220 €
+              </div>
+            </div>
+            <div class="package-block">
+              <div class="package-title">Aktivna ampula + tretman LED maskom</div>
+              <div class="package-details">
+                1× – 40 €<br>
+                5× – 60 €<br>
+                10× – 110 €
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKINCARE -->
+        <div class="section">
+          <div class="section-title">Skincare</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Masaža lica (15 min)</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Masaža lica (30 min)</div>
+              <div class="item-price">35 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Njega lica s maskom</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Ampula za lice</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">LED maska</div>
+              <div class="item-price">30 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Aura masaža (30 min)</div>
+              <div class="item-price">40 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Derma pen</div>
+              <div class="item-price">70 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Mezoterapija bez igle</div>
+              <div class="item-price">40 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Botox bez igle</div>
+              <div class="item-price">50 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Dubinska hidratantna njega (60 min)</div>
+              <div class="item-price">70 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Vitamin C tretman / protiv hiperpigmentacije (50 min)</div>
+              <div class="item-price">50 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Hidratantna terapija (45 min)</div>
+              <div class="item-price">40 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Pure Gold tretman (60 min)</div>
+              <div class="item-price">60 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">“Basic” njega normalne/mješovite kože (50 min)</div>
+              <div class="item-price">60 €</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- STRANICA 2 -->
+
+  <div class="page">
+    <div class="two-columns">
+
+      <!-- SKINCARE – PAKETI -->
+      <div>
+        <div class="section">
+          <div class="section-title">Skincare – paketi</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Kemijski piling – paket 5×</div>
+              <div class="item-price">120 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Vitamin C (50 min) – paket 4×</div>
+              <div class="item-price">180 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Lifting tretman (45 min) – paket 4×</div>
+              <div class="item-price">130 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Pure Gold – paket 3×</div>
+              <div class="item-price">150 €</div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Tretman područja s maskom (30 min) + Pure Gold Oil</div>
+              <div class="package-details">
+                1× – 80 €<br>
+                Paket 5× – 350 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Koža oštećena suncem – eksfolijacija (60 min)</div>
+              <div class="package-details">
+                + X-Shot<br>
+                + Caviar ampula<br>
+                + Clay Lavender maska<br>
+                + Vita Derma krema<br>
+                1× – 140 €<br>
+                Paket 5× – 600 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">RF tretman (30 min)</div>
+              <div class="package-details">
+                + X-Shot<br>
+                + Vita Derma krema<br>
+                1× – 80 €<br>
+                Paket 5× – 250 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Mezoterapija bez igle (60 min)</div>
+              <div class="package-details">
+                Vitamin C linija + anti-age tretman<br>
+                1× – 100 €<br>
+                Paket 3× – 280 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Tretman hranjenja kože + čišćenje lica (45 min)</div>
+              <div class="package-details">
+                + maska med<br>
+                + hranjiva ampula<br>
+                + hijaluron krema<br>
+                1× – 80 €<br>
+                Paket 4× – 350 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Tretman obnavljanja i oksigenacije kože (45 min)</div>
+              <div class="package-details">
+                + Aloe Vera maska<br>
+                + Oxygen Shot<br>
+                + Hydro Control krema<br>
+                1× – 110 €<br>
+                Paket 3× – 300 €
+              </div>
+            </div>
+
+            <div class="package-block">
+              <div class="package-title">Tretman osjetljive kože (60 min)</div>
+              <div class="package-details">
+                + Clay + Honey maska<br>
+                + B5 Boost Shot<br>
+                + Lipo-peptid krema<br>
+                1× – 100 €<br>
+                Paket 4× – 350 €
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- NOKTI I NJEGA STOPALA -->
+      <div>
+        <div class="section">
+          <div class="section-title">Nokti i njega stopala</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Trajni lak s manikurom</div>
+              <div class="item-price">25 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Manikura + lakiranje (obični lak)</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Lakiranje (obični lak)</div>
+              <div class="item-price">11 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Manikura</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Skidanje tuđeg trajnog laka</div>
+              <div class="item-price">10 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Trajni lak + skidanje tuđeg trajnog laka</div>
+              <div class="item-price">27 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Trajni lak na nogama</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Peeling stopala</div>
+              <div class="item-price">10 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Njega stopala</div>
+              <div class="item-price">25 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Njega stopala + trajni lak</div>
+              <div class="item-price">35 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Njega stopala + parafinska kupka + trajni lak</div>
+              <div class="item-price">50 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Parafinska kupka (noge)</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Muška kombinirana manikura</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Parafinska kupka (ruke)</div>
+              <div class="item-price">12 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Parafinska kupka + manikura</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Parafinska kupka + manikura + trajni lak</div>
+              <div class="item-price">40 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LJEPOTA OČIJU -->
+        <div class="section">
+          <div class="section-title">Ljepota očiju</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Brow lift</div>
+              <div class="item-price">28 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Lash lift</div>
+              <div class="item-price">30 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Lash &amp; brow lift</div>
+              <div class="item-price">50 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Skidanje trepavica</div>
+              <div class="item-price">10 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Obrve – korekcija</div>
+              <div class="item-price">7 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Obrve – bojanje</div>
+              <div class="item-price">7 €</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- STRANICA 3 -->
+
+  <div class="page">
+    <div class="two-columns">
+
+      <!-- DEPILACIJA -->
+      <div>
+        <div class="section">
+          <div class="section-title">Depilacija</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Cijele noge</div>
+              <div class="item-price">30 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Cijele ruke</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Bikini</div>
+              <div class="item-price">12 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Podkoljenice</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Podlaktice</div>
+              <div class="item-price">8 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Pazuh</div>
+              <div class="item-price">10 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Nadusnice</div>
+              <div class="item-price">5 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Brada</div>
+              <div class="item-price">6 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Leđa</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Trbuh</div>
+              <div class="item-price">12 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Cijele noge + bikini</div>
+              <div class="item-price">40 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Podkoljenice + bikini</div>
+              <div class="item-price">25 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Brazilska</div>
+              <div class="item-price">25 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Brazilska + bikini</div>
+              <div class="item-price">35 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRETMANI ZA OBLIKOVANJE TIJELA -->
+        <div class="section">
+          <div class="section-title">Tretmani za oblikovanje tijela</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="package-block">
+              <div class="package-title">Vacuum Fit 100</div>
+              <div class="package-details">
+                Trajanje tretmana: 60 min<br>
+                Pojedinačni tretman – 40 €<br><br>
+                Paket 5× VF100 – 170 €<br>
+                Paket 10× VF100 – 370 €
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEAD SPA + EDUKACIJE + BOTOX -->
+      <div>
+        <!-- HEAD SPA TRETMANI -->
+        <div class="section">
+          <div class="section-title">Head Spa tretmani</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Head Spa De Luxe</div>
+              <div class="item-price">120 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Head Spa Platinum</div>
+              <div class="item-price">140 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Inhalacija dišnih puteva i lica (morska sol)</div>
+              <div class="item-price">15 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Inhalacija dišnih puteva i lica (eterična ulja)</div>
+              <div class="item-price">20 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Head Spa by Aura</div>
+              <div class="item-price">55 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUKACIJE -->
+        <div class="section">
+          <div class="section-title">Edukacije</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">Maderoterapija – edukacija</div>
+              <div class="item-price">350 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">Derma pen – edukacija</div>
+              <div class="item-price">250 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTOX AURA – PAKETI -->
+        <div class="section">
+          <div class="section-title">Botox Aura – paketi</div>
+          <div class="section-underline"></div>
+          <div class="items">
+            <div class="item-row">
+              <div class="item-name">1× tretman</div>
+              <div class="item-price">100 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">5× tretmana</div>
+              <div class="item-price">300 €</div>
+            </div>
+            <div class="item-row">
+              <div class="item-name">10× tretmana</div>
+              <div class="item-price">600 €</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
