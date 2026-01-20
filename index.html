@@ -26,7 +26,7 @@
       color: var(--text-main);
     }
 
-    /* ONE single block */
+    /* One single block */
     .page {
       max-width: 1080px;
       margin: 0 auto;
@@ -36,7 +36,6 @@
     }
 
     .logo { text-align: center; margin-bottom: 12px; }
-
     .logo-main {
       font-family: 'Cinzel', serif;
       font-weight: 600;
@@ -45,7 +44,6 @@
       color: var(--aura-gold);
       line-height: 1;
     }
-
     .logo-wave {
       margin: 6px auto 0;
       width: 130px;
@@ -55,7 +53,6 @@
       opacity: 0.9;
       transform: skewX(-5deg);
     }
-
     .logo-sub {
       font-family: 'Cinzel', serif;
       font-size: 14px;
@@ -73,7 +70,7 @@
     .header-info span { display: block; }
     .header-info a { color: var(--aura-dark); text-decoration: none; }
 
-    /* Screen layout: 2 columns */
+    /* Screen layout (nice preview) */
     .layout {
       display: grid;
       grid-template-columns: 1fr;
@@ -117,7 +114,6 @@
     }
 
     .item-name { max-width: 78%; }
-
     .item-price {
       font-weight: 500;
       color: var(--aura-dark);
@@ -135,63 +131,60 @@
     .package-details { font-size: 13px; margin-left: 10px; line-height: 1.28; }
 
     /* =========================
-       PRINT: A3 single page
-       Use MULTI-COLUMN flow (no grid gaps)
+       PRINT: force ONE A3 page
        ========================= */
     @page {
       size: A3 portrait;
-      margin: 8mm;
+      margin: 6mm; /* tighter margin to help fit */
     }
 
     @media print {
-      body {
+      html, body {
         padding: 0;
+        margin: 0;
         background: #fff;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
 
+      /* Use zoom (works for pagination in Chromium) */
+      body { zoom: 0.92; } /* <- if still 2 pages, try 0.90 */
+
       .page {
         max-width: none;
         border: none;
         margin: 0;
-        padding: 0; /* margins handled by @page */
+        padding: 0; /* @page margin handles spacing */
       }
 
-      /* Slightly tighter typography to ensure 1 page */
-      .logo-main { font-size: 34px; }
-      .logo-sub { font-size: 12px; letter-spacing: 5px; }
-      .header-info { font-size: 11px; margin-bottom: 14px; }
-
-      .section-title { font-size: 14.5px; }
-      .section-underline { margin-bottom: 7px; }
-      .items { font-size: 11.2px; line-height: 1.18; }
-      .item-row { margin: 1.2px 0; }
-      .package-details { font-size: 10.6px; margin-left: 8px; }
-
-      .section { margin-top: 12px; }
-
-      /* IMPORTANT: flow content like newspaper columns */
+      /* Newspaper flow (prevents grid “empty gaps”) */
       .layout {
-        display: block;               /* stop grid */
-        column-count: 3;              /* 3 columns on A3 portrait */
-        column-gap: 8mm;
+        display: block !important;
+        column-count: 3;
+        column-gap: 6mm;
         column-fill: auto;
       }
 
-      /* Prevent a section from splitting between columns/pages */
+      /* Keep each section as a unit inside columns */
       .section {
         break-inside: avoid-column;
         page-break-inside: avoid;
-        display: inline-block;        /* required for column break control */
+        display: inline-block;
         width: 100%;
+        margin-top: 11px;
       }
 
-      /* If it STILL barely spills to page 2, reduce this from 1 to 0.97/0.96 */
-      .page {
-        transform: scale(0.985);
-        transform-origin: top left;
-      }
+      /* Slightly tighter print typography */
+      .logo-main { font-size: 33px; }
+      .logo-sub { font-size: 12px; letter-spacing: 5px; }
+      .header-info { font-size: 11px; margin-bottom: 12px; }
+
+      .section-title { font-size: 14px; }
+      .section-underline { margin-bottom: 7px; }
+
+      .items { font-size: 11px; line-height: 1.16; }
+      .item-row { margin: 1.1px 0; }
+      .package-details { font-size: 10.4px; margin-left: 8px; }
 
       a { color: inherit; text-decoration: none; }
     }
@@ -212,10 +205,8 @@
       <span>Instagram: <a href="https://www.instagram.com/aurabeautystudiio" target="_blank">@aurabeautystudiio</a></span>
     </div>
 
-    <!-- ONE continuous block -->
     <div class="layout">
 
-      <!-- MASAŽE -->
       <div class="section">
         <div class="section-title">Masaže</div>
         <div class="section-underline"></div>
@@ -230,7 +221,6 @@
         </div>
       </div>
 
-      <!-- MASAŽE – PAKETI -->
       <div class="section">
         <div class="section-title">Masaže – paketi</div>
         <div class="section-underline"></div>
@@ -242,7 +232,6 @@
         </div>
       </div>
 
-      <!-- MADEROTERAPIJA – PAKETI -->
       <div class="section">
         <div class="section-title">Maderoterapija – paketi</div>
         <div class="section-underline"></div>
@@ -261,7 +250,6 @@
         </div>
       </div>
 
-      <!-- LED MASKA -->
       <div class="section">
         <div class="section-title">LED maska</div>
         <div class="section-underline"></div>
@@ -269,23 +257,18 @@
           <div class="package-block">
             <div class="package-title">Skidanje make-upa + čišćenje + peeling + tretman LED maskom</div>
             <div class="package-details">
-              1× – 80 €<br>
-              5× – 120 €<br>
-              10× – 220 €
+              1× – 80 €<br>5× – 120 €<br>10× – 220 €
             </div>
           </div>
           <div class="package-block">
             <div class="package-title">Aktivna ampula + tretman LED maskom</div>
             <div class="package-details">
-              1× – 40 €<br>
-              5× – 60 €<br>
-              10× – 110 €
+              1× – 40 €<br>5× – 60 €<br>10× – 110 €
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SKINCARE -->
       <div class="section">
         <div class="section-title">Skincare</div>
         <div class="section-underline"></div>
@@ -307,7 +290,6 @@
         </div>
       </div>
 
-      <!-- SKINCARE – PAKETI -->
       <div class="section">
         <div class="section-title">Skincare – paketi</div>
         <div class="section-underline"></div>
@@ -372,7 +354,6 @@
         </div>
       </div>
 
-      <!-- NOKTI I NJEGA STOPALA -->
       <div class="section">
         <div class="section-title">Nokti i njega stopala</div>
         <div class="section-underline"></div>
@@ -396,7 +377,6 @@
         </div>
       </div>
 
-      <!-- LJEPOTA OČIJU -->
       <div class="section">
         <div class="section-title">Ljepota očiju</div>
         <div class="section-underline"></div>
@@ -410,7 +390,6 @@
         </div>
       </div>
 
-      <!-- DEPILACIJA -->
       <div class="section">
         <div class="section-title">Depilacija</div>
         <div class="section-underline"></div>
@@ -432,7 +411,6 @@
         </div>
       </div>
 
-      <!-- TRETMANI ZA OBLIKOVANJE TIJELA -->
       <div class="section">
         <div class="section-title">Tretmani za oblikovanje tijela</div>
         <div class="section-underline"></div>
@@ -449,7 +427,6 @@
         </div>
       </div>
 
-      <!-- HEAD SPA TRETMANI -->
       <div class="section">
         <div class="section-title">Head Spa tretmani</div>
         <div class="section-underline"></div>
@@ -462,7 +439,6 @@
         </div>
       </div>
 
-      <!-- EDUKACIJE -->
       <div class="section">
         <div class="section-title">Edukacije</div>
         <div class="section-underline"></div>
@@ -472,7 +448,6 @@
         </div>
       </div>
 
-      <!-- BOTOX AURA – PAKETI -->
       <div class="section">
         <div class="section-title">Botox Aura – paketi</div>
         <div class="section-underline"></div>
@@ -483,7 +458,6 @@
         </div>
       </div>
 
-      <!-- POKLON BONOVI -->
       <div class="section">
         <div class="section-title">Poklon bonovi</div>
         <div class="section-underline"></div>
