@@ -4,159 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aura Beauty Studio – Cjenik (A3)</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --aura-gold:#CBB283;
-      --aura-gold-dark:#B89A68;
-      --aura-white:#FAF9F5;
-      --aura-dark:#424754;
-      --text-main:#222222;
+    :root {
+      --aura-gold: #CBB283;
+      --aura-gold-dark: #B89A68;
+      --aura-white: #FAF9F5;
+      --aura-dark: #424754;
+      --text-main: #222222;
     }
-    *{ box-sizing:border-box; }
 
-    body{
-      margin:0;
-      padding:40px;
-      font-family:'Montserrat',sans-serif;
-      background:var(--aura-white);
-      color:var(--text-main);
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--aura-white);
+      color: var(--text-main);
     }
 
     /* ONE single block */
-    .page{
-      max-width:1080px;
-      margin:0 auto;
-      background:#fff;
-      padding:40px 50px;
-      border:1px solid rgba(0,0,0,0.05);
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px 50px;
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
-    .logo{ text-align:center; margin-bottom:15px; }
-    .logo-main{
-      font-family:'Cinzel',serif;
-      font-weight:600;
-      font-size:40px;
-      letter-spacing:4px;
-      color:var(--aura-gold);
-    }
-    .logo-wave{
-      margin:4px auto 0;
-      width:130px;
-      height:12px;
-      border-radius:50px;
-      background:linear-gradient(90deg,var(--aura-gold-dark),var(--aura-gold));
-      opacity:.9;
-      transform:skewX(-5deg);
-    }
-    .logo-sub{
-      font-family:'Cinzel',serif;
-      font-size:14px;
-      letter-spacing:6px;
-      margin-top:14px;
-      color:var(--aura-gold);
+    .logo { text-align: center; margin-bottom: 12px; }
+
+    .logo-main {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 40px;
+      letter-spacing: 4px;
+      color: var(--aura-gold);
+      line-height: 1;
     }
 
-    .header-info{
-      text-align:center;
-      font-size:13px;
-      margin-bottom:26px;
-    }
-    .header-info span{ display:block; }
-    .header-info a{ color:var(--aura-dark); text-decoration:none; }
-
-    .section{ margin-top:18px; }
-    .section-title{
-      font-family:'Cinzel',serif;
-      font-size:18px;
-      letter-spacing:2px;
-      color:var(--aura-dark);
-      margin-bottom:6px;
-      text-transform:uppercase;
-    }
-    .section-underline{
-      width:60px;
-      height:2px;
-      background:var(--aura-gold);
-      margin-bottom:10px;
+    .logo-wave {
+      margin: 6px auto 0;
+      width: 130px;
+      height: 12px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--aura-gold-dark), var(--aura-gold));
+      opacity: 0.9;
+      transform: skewX(-5deg);
     }
 
-    .items{ font-size:14px; }
-    .item-row{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      margin:2px 0;
-    }
-    .item-name{ max-width:78%; }
-    .item-price{
-      font-weight:500;
-      color:var(--aura-dark);
-      white-space:nowrap;
-    }
-    .item-note{ font-size:12px; opacity:.8; }
-
-    .subsection-title{
-      font-weight:500;
-      margin-top:10px;
-      margin-bottom:4px;
+    .logo-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 6px;
+      margin-top: 12px;
+      color: var(--aura-gold);
     }
 
-    .package-block{ margin:6px 0 10px 0; }
-    .package-title{ font-weight:500; margin-bottom:2px; }
-    .package-details{ font-size:13px; margin-left:10px; line-height:1.35; }
+    .header-info {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 24px;
+      line-height: 1.35;
+    }
+    .header-info span { display: block; }
+    .header-info a { color: var(--aura-dark); text-decoration: none; }
 
-    /* SCREEN layout (keep your 2-col look) */
-    @media (min-width: 900px){
-      .two-columns{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:30px 40px;
-        align-items:start;
-      }
+    /* Screen layout: 2 columns */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px 40px;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .layout { grid-template-columns: 1fr 1fr; }
     }
 
-    /* PRINT: force A3 + pack content tightly + 3 columns */
-    @page{
+    .section { margin-top: 18px; }
+    .section:first-child { margin-top: 0; }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: var(--aura-dark);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .section-underline {
+      width: 60px;
+      height: 2px;
+      background: var(--aura-gold);
+      margin-bottom: 10px;
+    }
+
+    .items {
+      font-size: 14px;
+      line-height: 1.22;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 2px 0;
+    }
+
+    .item-name { max-width: 78%; }
+
+    .item-price {
+      font-weight: 500;
+      color: var(--aura-dark);
+      white-space: nowrap;
+    }
+
+    .subsection-title {
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .package-block { margin: 6px 0 10px 0; }
+    .package-title { font-weight: 500; margin-bottom: 2px; }
+    .package-details { font-size: 13px; margin-left: 10px; line-height: 1.28; }
+
+    /* =========================
+       PRINT: A3 single page
+       Use MULTI-COLUMN flow (no grid gaps)
+       ========================= */
+    @page {
       size: A3 portrait;
-      margin: 10mm;
+      margin: 8mm;
     }
-    @media print{
-      body{
-        padding:0;
-        background:#fff;
-        -webkit-print-color-adjust:exact;
-        print-color-adjust:exact;
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
-      .page{
-        width:auto;
-        max-width:none;
-        border:none;
-        margin:0;
-        padding:0; /* use @page margin */
+      .page {
+        max-width: none;
+        border: none;
+        margin: 0;
+        padding: 0; /* margins handled by @page */
       }
 
-      /* denser A3 layout */
-      .two-columns{
-        display:grid !important;
-        grid-template-columns:1fr 1fr 1fr;
-        gap:8mm 8mm;
-        align-items:start;
+      /* Slightly tighter typography to ensure 1 page */
+      .logo-main { font-size: 34px; }
+      .logo-sub { font-size: 12px; letter-spacing: 5px; }
+      .header-info { font-size: 11px; margin-bottom: 14px; }
+
+      .section-title { font-size: 14.5px; }
+      .section-underline { margin-bottom: 7px; }
+      .items { font-size: 11.2px; line-height: 1.18; }
+      .item-row { margin: 1.2px 0; }
+      .package-details { font-size: 10.6px; margin-left: 8px; }
+
+      .section { margin-top: 12px; }
+
+      /* IMPORTANT: flow content like newspaper columns */
+      .layout {
+        display: block;               /* stop grid */
+        column-count: 3;              /* 3 columns on A3 portrait */
+        column-gap: 8mm;
+        column-fill: auto;
       }
 
-      .logo-main{ font-size:34px; }
-      .header-info{ font-size:11px; margin-bottom:16px; }
-      .section{ margin-top:14px; break-inside:avoid; page-break-inside:avoid; }
-      .section-title{ font-size:15px; }
-      .section-underline{ margin-bottom:8px; }
+      /* Prevent a section from splitting between columns/pages */
+      .section {
+        break-inside: avoid-column;
+        page-break-inside: avoid;
+        display: inline-block;        /* required for column break control */
+        width: 100%;
+      }
 
-      .items{ font-size:12px; }
-      .item-row{ margin:1.5px 0; }
-      .package-details{ font-size:11.5px; }
+      /* If it STILL barely spills to page 2, reduce this from 1 to 0.97/0.96 */
+      .page {
+        transform: scale(0.985);
+        transform-origin: top left;
+      }
 
-      a{ color:inherit; text-decoration:none; }
+      a { color: inherit; text-decoration: none; }
     }
   </style>
 </head>
@@ -175,8 +212,8 @@
       <span>Instagram: <a href="https://www.instagram.com/aurabeautystudiio" target="_blank">@aurabeautystudiio</a></span>
     </div>
 
-    <!-- ONE single continuous block (no page gaps) -->
-    <div class="two-columns">
+    <!-- ONE continuous block -->
+    <div class="layout">
 
       <!-- MASAŽE -->
       <div class="section">
